@@ -1,0 +1,21 @@
+{
+    
+    "compilerOptions": {
+        "outDir": "./lib",
+        "alwaysStrict": true,
+        "rootDir": "src",
+        "baseUrl": ".",
+        "target": "ES2018",
+        "module": "commonjs",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "composite": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@docgeni/*": ["./packages/*/src"]
+        }
+    },
+    "include": ["src"],
+}

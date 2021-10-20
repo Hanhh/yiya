@@ -1,2 +1,7 @@
 const env = process.env.NODE_ENV;
-require('./src/index.ts');
+
+if (['development'].includes(env)) {
+  require('./src/index');
+} else {
+  require('./lib/index');
+}

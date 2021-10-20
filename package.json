@@ -4,7 +4,9 @@
   "description": "Automatically modify the version number in package.json, automatically generate changelog files, submit commit and tag, and automatically publish",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p",
+    "watch": "tsc -p -w",
+    "start": "NODE_ENV=development ts-node bin/yiya"
   },
   "repository": {
     "type": "git",
@@ -13,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "bin": {
-    "yiya": "bin/cli.ts"
+    "yiya": "bin/yiya"
   },
   "preferGlobal": true,
   "dependencies": {

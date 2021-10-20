@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('Hello world!');
+// console.log('hello ', process.argv[2]);
+
+require('../index');

@@ -4,8 +4,10 @@
   "description": "Automatically modify the version number in package.json, automatically generate changelog files, submit commit and tag, and automatically publish",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p",
-    "watch": "tsc -p -w",
+    "clean": "rm -rf ./lib && rm -f ./tsconfig.tsbuildinfo",
+    "build-only": "tsc -b",
+    "build": "yarn clean && yarn build-only",
+    "watch": "yarn clean && tsc -w",
     "start": "NODE_ENV=development ts-node bin/yiya"
   },
   "repository": {

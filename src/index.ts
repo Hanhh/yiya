@@ -1,6 +1,7 @@
 import { publishCommand } from './publish';
 import { setCommand } from './setup';
 const { green, red } = require("chalk");
+import { showVersionDialog } from './default';
 
 var argv = require("yargs")
 
@@ -32,3 +33,4 @@ var argv = require("yargs")
   .help().argv;
 
 console.log("hello ", argv.n);
+showVersionDialog()

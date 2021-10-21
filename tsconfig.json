@@ -12,10 +12,7 @@
         "sourceMap": true,
         "composite": true,
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "paths": {
-            "@docgeni/*": ["./packages/*/src"]
-        }
+        "allowSyntheticDefaultImports": true
     },
-    "include": ["src"],
+    "include": ["src"]
 }

@@ -1,6 +1,6 @@
 {
   "name": "yiya",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Automatically modify the version number in package.json, automatically generate changelog files, submit commit and tag, and automatically publish",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,11 @@
   "preferGlobal": true,
   "dependencies": {
     "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "conventional-changelog": "^3.1.24",
     "inquirer": "^8.2.0",
     "inquirer-autocomplete-prompt": "^1.4.0",
+    "semver": "^7.3.5",
     "yargs": "^17.2.1"
   },
   "devDependencies": {

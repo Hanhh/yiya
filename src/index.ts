@@ -1,9 +1,10 @@
-import { publishCommand } from './publish';
-import { setCommand } from './setup';
-const { green, red } = require("chalk");
+import * as yargs from "yargs";
+import { publishCommand } from "./publish";
+import { setCommand } from "./setup";
+import { green, red } from "chalk";
 import { showVersionDialog } from './default';
 
-var argv = require("yargs")
+var argv = yargs
 
   .usage(
     "[options]\n\n  Version format: MAJOR.MINOR.PATCH (see: https://semver.org/)"
@@ -26,11 +27,28 @@ var argv = require("yargs")
   .alias("h", "help")
   .epilog(
     "\n  Tip:\n     You should run this script in the root directory of you project or run by npm scripts.\n  Examples:\n" +
-      `     ${green("$")} relix --patch \n     ${green("$")} relix --prepatch \n     ${green("$")} relix --prepatch alpha \n     ${green("$")} relix --major --accessPublic \n     ${green("$")} relix --patch --remote upstream/branch \n`
-  ).fail((err) => {
+      `     ${green("$")} yiya --patch \n     ${green(
+        "$"
+      )} yiya --prepatch \n     ${green(
+        "$"
+      )} yiya --prepatch alpha \n     ${green(
+        "$"
+      )} yiya --major --accessPublic \n     ${green(
+        "$"
+      )} yiya --patch --remote upstream/branch \n`
+  )
+  .fail((err) => {
     console.error(`${red(err)}`);
   })
   .help().argv;
 
-console.log("hello ", argv.n);
-showVersionDialog()
+const command = process.argv[2] as string;
+if(command) {
+  if (!["publish", "set"].includes(command)) {
+    yargs.showHelp();
+  }
+}else {
+  showVersionDialog()
+}
+
+

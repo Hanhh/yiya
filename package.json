@@ -1,6 +1,6 @@
 {
   "name": "yiya",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "description": "Automatically modify the version number in package.json, automatically generate changelog files, submit commit and tag, and automatically publish",
   "main": "index.js",
   "scripts": {
